@@ -1,0 +1,9 @@
+*~
+lib
+pkgs
+bottle
+bin
+curlprog
+tarball_incremental
+scan
+minibrew.tar.xz
