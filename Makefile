@@ -19,4 +19,4 @@ curlprog: curlprog.m
 	codesign --sign - curlprog
 
 clean:
-	rm scan curlprog tarball_incremental minibrew.tar.xz
+	rm -f scan curlprog tarball_incremental minibrew.tar.xz
