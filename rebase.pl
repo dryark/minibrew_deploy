@@ -9,7 +9,7 @@ my $arch = `uname -m`;
 $arch =~ s/\n//;
 
 my $install_name_tool = "install_name_tool";
-if( ! -e "/usr/bin/install_name_name" ) {
+if( ! -e "/usr/bin/install_name_tool" ) {
     $install_name_tool = "./install_name_tool";
 }
 
@@ -54,7 +54,7 @@ for my $file ( sort keys %files ) {
         check_lib_existence( $rep1, $import );
     }
     my $change = join( ' ', @changes );
-    #print "install_name_tool $change \"$file\"\n";
+    #print "$install_name_tool $change \"$file\"\n";
     `$install_name_tool $change \"$file\" 2>/dev/null`;
     if( $arch eq 'arm64' ) {
         `codesign --sign - --force --preserve-metadata=entitlements,requirements,flags,runtime \"$file\" 2>/dev/null`;
