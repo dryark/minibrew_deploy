@@ -71,7 +71,7 @@ void scan_directory(const char *path, char exclude[][256], int exclude_count) {
             // Check if the file is executable
             else if (statbuf.st_mode & S_IXUSR) {
                 if(
-                    !strstr(entry->d_name, ".so") &&
+                    //!strstr(entry->d_name, ".so") &&
                     !strstr(entry->d_name, ".py") &&
                     !strstr(entry->d_name, ".pl")
                 ) {
