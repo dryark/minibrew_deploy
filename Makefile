@@ -1,6 +1,6 @@
 all: minibrew.tar.xz
 
-SOURCES := dl.pl extract.pl genlib.pl genbin.pl rebase.pl deploy.pl $(wildcard *.json) curlprog tarball_incremental scan mod/Ujsonin.pm
+SOURCES := dl.pl extract.pl genlib.pl genbin.pl rebase.pl deploy.pl $(wildcard *.json) curlprog tarball_incremental scan mod/Ujsonin.pm mod/Util.pm
 EMPTY_FOLDERS := bin pkgs lib bottle
 
 minibrew.tar.xz: $(SOURCES)
