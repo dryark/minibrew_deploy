@@ -2,66 +2,39 @@
 # Copyright (c) 2024 Dry Ark LLC
 use strict;
 use FindBin qw($RealBin);
+use lib 'mod';
+use Util qw/files_in_dir find_in_dir_x/;
 
 my $libabs = "$RealBin/lib";
 my $binabs = "$RealBin/bin";
 
-opendir( my $dh, "pkgs" );
-my @files = readdir( $dh );
-closedir( $dh );
-
-for my $file ( @files ) {
-    next if( $file =~ m/^\.+$/ );
-    next if( $file =~ m/~$/ );
-    #next if( $file eq 'lib' );
-    my $full = "pkgs/$file";
+for my $pkgDir ( files_in_dir( "pkgs" ) ) {
+    next if( $pkgDir =~ m/~$/ );
+    my $full = "pkgs/$pkgDir";
     next if( ! -d $full );
     handle_dir( $full );
 }
 
 sub handle_dir {
     my $dir = shift;
-    
-    opendir( my $dh, "./$dir" ) or die "Could not open ./$dir";
-    my @files = readdir( $dh );
-    closedir( $dh );
-    
-    for my $file ( @files ) {
-        next if( $file =~ m/^\.+$/ );
-        if( $file =~ m/^[0-9\.\_]+$/ ) {
+    for my $versionDir ( files_in_dir( "./$dir" ) ) {
+        if( $versionDir =~ m/^[0-9\.\_]+$/ ) {
             #print "$dir/$file\n";
-            my $bindir = "$dir/$file/bin";
-            if( -e $bindir ) {
-                #print "$libdir\n";
-                handle_bin( $bindir );
-            }
+            my $bindir = "$dir/$versionDir/bin";
+            handle_bindir( $bindir ) if( -e $bindir );
         }
     }
 }
 
-sub handle_bin {
+sub handle_bindir {
     my $bindir = shift;
-    my @bins;
-    bin_rec( $bindir, "", \@bins );
-    for my $bin ( @bins ) {
+    for my $bin ( find_in_dir_x( $bindir, "x", 0 ) ) {
         my $rel = $bin->{rel};
-        my $full = $bin->{full};
-        
         
         my $symlink = "bin/$rel";
-        if( -e $symlink ) {
-            unlink $symlink;
-        }
+        unlink $symlink if( -e $symlink );
         
-        my $dest = "../$full";
-        #if( -l $full ) {
-        #    my $dest2 = readlink( $full );
-        #    my $pathToFull = $full;
-        #    $pathToFull =~ s|/[^/]+||;
-        #    my $newDest = "../$pathToFull/$dest2";
-        #    $dest = $newDest;
-        #}
-        #print "$rel -> $dest\n";
+        my $dest = "../" . $bin->{full};
         
         if( $rel eq 'python3' ) {
             symlink( $dest, "bin/python3-real" );
@@ -71,30 +44,8 @@ sub handle_bin {
                 "exec $binabs/python3-real \"\$\@\"\n";
             close( $fh );
             chmod 0755, "bin/python3";
+            next;
         }
-        else {
-            symlink( $dest, $symlink );
-        }
-    }
-}
-
-sub bin_rec {
-    my ( $abs, $rel, $res ) = @_;
-    opendir( my $dh, $abs );
-    my @files = readdir( $dh );
-    closedir( $dh );
-    
-    for my $file ( @files ) {
-        next if( $file =~ m/^\.+$/ );
-        my $full = "$abs/$file";
-        if( -d $full ) {
-            #dylib_rec( $full, $rel ? "$rel/$file" : "$file", $res );
-        }
-        elsif( -x $full ) {
-            push( @$res, {
-                full => $full,
-                rel => ( $rel ? "$rel/$file" : "$file" ),
-            } );
-        }
+        symlink( $dest, $symlink );
     }
 }

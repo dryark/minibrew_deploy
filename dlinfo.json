@@ -3,6 +3,7 @@
   {
     name:"xz"
     url:"https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:"
+    v:"5.4.6"
     platforms:{
       arm64_sonoma: "01ced87d92d0c1131c069108efb14f6940f9e528e2d044ac41d9a0d8f5169f2e"
       arm64_ventura: "baba463d36447d4c858e51dfac347792eb65216e21eedab7b98fe79793335f28"
@@ -15,6 +16,7 @@
   {
     name:"libimobiledevice-glue"
     url:"https://ghcr.io/v2/homebrew/core/libimobiledevice-glue/blobs/sha256:"
+    v:"1.2.0"
     platforms:{
       arm64_sonoma: "5e00139aad86809adde7ad17bceeedda2a3177372df04fbe9a91bc3fa1366a5b"
       arm64_ventura: "005fde87e6014290eb3c9e08712b6dc93dc3febf2d56c44094f37f34fe149d10"
@@ -27,6 +29,7 @@
   {
     name:"libplist"
     url:"https://ghcr.io/v2/homebrew/core/libplist/blobs/sha256:"
+    v:"2.5.0"
     platforms:{
       arm64_sonoma: "59354164cd075ee3597dfc2670b2283a439b0154730dd0f4d9ccc694cbcb54f1"
       arm64_ventura: "42fa24333cc5431048e01a225ded9addb37447575032d579c845eadd1b1cd4db"
@@ -39,6 +42,7 @@
   {
     name:"libusbmuxd"
     url:"https://ghcr.io/v2/homebrew/core/libusbmuxd/blobs/sha256:"
+    v:"2.1.0"
     platforms:{
       arm64_sonoma: "8149dcd7d29cdf463c40a10e8030dcb23a4eb9e69078a88fb2e8671d9a27bdad"
       arm64_ventura: "3908c3a4d699d2aff22b40e6353c498042153a47798357c4500b76b495f24e88"
@@ -51,6 +55,7 @@
   {
     name:"libtasn1"
     url:"https://ghcr.io/v2/homebrew/core/libtasn1/blobs/sha256:"
+    v:"4.19.0"
     platforms:{
       arm64_sonoma: "975eaba8f266020c3c82a667a0e693a1c6b1f76e317a95bb79b6906fd248bcc5"
       arm64_ventura: "9fcf93a7992888a29caf2bc3ad37fb27ee8ceef180367797f4a11040fa761eac"
@@ -64,6 +69,7 @@
   {
     name:"sqlite"
     url:"https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:"
+    v:"3.45.3"
     platforms:{
       arm64_sonoma: "253a7732af34b28f992072e84d9977d511844a0ebd238e94a5cb2f3fe254604c"
       arm64_ventura: "844fbdee84f718f211936a2aea851a6983af3501533af643afccb17314e30fd2"
@@ -76,6 +82,7 @@
   {
     name:"openssl-3"
     url:"https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:"
+    v:"3.3.0"
     platforms:{
       arm64_sonoma: "ec6f9daf8e32d96f4a2f4cd56d18533ee47bb8d9e7cb3d832ac64115d8a1a4ca"
       arm64_ventura: "58665ec9e2873dba2799be5992eab3973f230acc352d09bd4a69131ac3ccd2d4"
@@ -88,6 +95,7 @@
   {
     name:"mpdecimal"
     url:"https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:"
+    v:"4.0.0"
     platforms:{
       arm64_sonoma: "2965eec8a30f462b3bd6a8cc2756c1645e75f4399471594e434e36e886239e2e"
       arm64_ventura: "1fd72d5f4b35a3d4735efd7d934154ec8b3666267571f96d64244ad35b3ee814"
@@ -100,6 +108,7 @@
   {
     name:"ideviceinstaller"
     url:"https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:"
+    v:"1.1.1"
     platforms:{
       arm64_sonoma: "818061a6b3ede66696892086a119faa1df036d6d4a3242672fdb955db0d23e6c"
       arm64_ventura: "dfaf6de5dc0578c882412ef904195d77a6aacf7f1b9b28855ba5d8610ce17ca1"
@@ -112,6 +121,7 @@
   {
     name:"libimobiledevice"
     url:"https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:"
+    v:"1.3.0"
     platforms:{
       arm64_sonoma: "f496e32077cc020a7ffcb6a6afee3034fc4c55ced685ba0b2155c0355bbf7a95"
       arm64_ventura: "c0f9da975e59842256875121304fdb0825909f3c43b8cf1271b505cd7436955e"
@@ -124,6 +134,7 @@
   {
     name:"python-3.12"
     url:"https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:"
+    v:"3.12.3"
     platforms:{
       arm64_sonoma: "fd301f96783de7d57e8d704ca0967e5cf111350acbf1ad8bec36fa27bb75fc3c"
       arm64_ventura: "94baa02aa52145f2a41a11ef2f12787510ab31c449457e334abd9f09b126c01f"
@@ -136,6 +147,7 @@
   {
     name:"readline"
     url:"https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:"
+    v:"8.2.10"
     platforms:{
       arm64_sonoma: "713fd1fa8544426b7e97eb21d13153195fea4c407db8a174bd183777b81c9192"
       arm64_ventura: "90351660d5ceca72a4c0a287555f2045db95f78aa5f65011b94213429f729cde"
@@ -148,6 +160,7 @@
   {
     name:"ca-certificates"
     url:"https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:"
+    v:"2024-03-11"
     platforms:{
       all: "cab828953672906e00a8f25db751977b8dc4115f021f8dfe82b644ade03dacdb"
     }
@@ -155,6 +168,7 @@
   {
     name:"krb5"
     url:"https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:"
+    v:"1.21.2"
     platforms:{
       arm64_sonoma: "2d4dc47f318eb4b612c6082831602dabf86737abaf16205efca110f79d2c4582"
       arm64_ventura: "7d9d7b0073393cd9629f017b4dfe5866363884703fff78cbbff8a6cb39390f77"
@@ -167,6 +181,7 @@
   {
     name:"zstd"
     url:"https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:"
+    v:"1.5.6"
     platforms:{
       arm64_sonoma: "2028141683f55bffcd0693b9e49eef1e3dabc1e184214cacb173ca9bd54dabc0"
       arm64_ventura: "035cbadb205abbe00107f0c7746f3715e3841c007e4b3a309398e65d50c43cf5"
@@ -179,6 +194,7 @@
   {
     name:"lz4"
     url:"https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:"
+    v:"1.9.4"
     platforms:{
       arm64_sonoma: "5a8b7116d978e403c525e61794c60b43480d0afc83e499a763f7f14641bbc9b1"
       arm64_ventura: "cd29e40287b0a2d665a647acbea5512e8db4c371687147aab5c60bf9059b2cca"
@@ -192,6 +208,7 @@
   {
     name:"libzip"
     url:"https://ghcr.io/v2/homebrew/core/libzip/blobs/sha256:"
+    v:"1.10.1"
     platforms:{
       arm64_sonoma: "8ecf154f8c0bab71c0008c6f73eb8cd2df78cfa424d8bdcffc66dc95b3bf7c14"
       arm64_ventura: "cd7bda731a8b2e5d1a3cdf5be6b515718c56d55d16a5b45faa1a91daf9c0ca2b"

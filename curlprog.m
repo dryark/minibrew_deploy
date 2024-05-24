@@ -29,6 +29,7 @@ int progress_callback(void *clientp, double dltotal, double dlnow, double ultota
     static double last_dl = 0;
     if (dlnow - last_dl > 20480) { // 20KB
         printf("%.0f\n", dlnow-last_dl);
+        fflush( stdout );
         last_dl = dlnow;
     }
     return 0;

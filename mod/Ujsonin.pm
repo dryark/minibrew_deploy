@@ -1,5 +1,6 @@
 # Copyright (c) 2024 Dry Ark LLC
 package Ujsonin;
+use Data::Dumper;
 
 my $handlers = {};
 
@@ -18,10 +19,15 @@ sub handle_null {
     return { node => 0 }; #{ _type => 8 } };
 }
 
-sub init {
+#sub init {
     $handlers->{"true"} = [ \&handle_true, 0 ];
     $handlers->{"false"} = [ \&handle_false, 0 ];
     $handlers->{"null"} = [ \&handle_null, 0 ];
+#}
+
+sub parse_file {
+    my $data = read_file( shift );
+    return parse( $data, 0 );
 }
 
 sub parse {
@@ -266,6 +272,70 @@ AfterVal:
     goto Hash;
 Done:
     return $root;
+}
+
+sub flatten {
+    my $node = shift;
+    my $str = "";
+    flatten_recurse( \$str, $node, "  ", 1 );
+    return $str;
+}
+
+sub flatten_recurse {
+    my ( $strRef, $node, $dent, $ln ) = @_;
+    my $typ = ref( $node );
+    if( $typ eq 'HASH' ) {
+        $$strRef .= "{\n";
+        for my $key ( sort keys %$node ) {
+            #print "$key\n";
+            next if( $key eq '_parent' );
+            next if( $key eq '_type' );
+            $$strRef .= "$dent$key: ";
+            flatten_recurse( $strRef, $node->{$key}, "$dent  ", $ln );
+        }
+        my $end = substr( $dent, 2, length( $dent ) );
+        $$strRef .= "$end}\n";
+        return;
+    }
+    if( $typ eq 'ARRAY' ) {
+        if( $node->[0] eq '_flat' ) {
+            $$strRef .= "[ ";
+            shift @$node;
+            my $cnt = scalar @$node;
+            for( my $i=0; $i<$cnt; $i++ ) {
+                my $item = $node->[ $i ];
+                flatten_recurse( $strRef, $item, "", 0 );
+                $$strRef .= ", " if( $i < ( $cnt - 1 ) );
+            }
+            #my $end = substr( $dent, 2, length( $dent ) );
+            $$strRef .= " ]\n";
+            return;
+        }
+        $$strRef .= "[\n";
+        for my $item ( @$node ) {
+            $$strRef .= "$dent";
+            flatten_recurse( $strRef, $item, "$dent  ", $ln );
+        }
+        my $end = substr( $dent, 2, length( $dent ) );
+        $$strRef .= "$end]\n";
+        return;
+    }
+    #print Dumper( $node );
+    if( $node =~ m/^[0-9]+$/ ) {
+        $$strRef .= "$node";
+        $$strRef .= "\n" if( $ln );
+        return;
+    }
+    $$strRef .= "\"$node\"";
+    $$strRef .= "\n" if( $ln );
+}
+
+sub read_file {
+    my $fn = shift;
+    open my $fh, '<', $fn or return "";
+    my $data = do { local $/; <$fh> };
+    close( $fh );
+    return $data;
 }
 
 1;
