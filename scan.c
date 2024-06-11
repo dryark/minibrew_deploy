@@ -34,12 +34,12 @@ void scan_directory(const char *path, char exclude[][256], int exclude_count) {
     struct dirent *entry;
     struct stat statbuf;
 
-    if (!(dir = opendir(path))) {
+    if( !(dir = opendir(path)) ) {
         perror("Failed to open directory");
         return;
     }
 
-    while ((entry = readdir(dir)) != NULL) {
+    while( (entry = readdir(dir)) != NULL ) {
         char fullpath[1024];
         if (strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0)
             continue;
@@ -47,20 +47,22 @@ void scan_directory(const char *path, char exclude[][256], int exclude_count) {
         snprintf(fullpath, sizeof(fullpath), "%s/%s", path, entry->d_name);
 
         // Check if this directory should be excluded
-        if (entry->d_type == DT_DIR && is_excluded(entry->d_name, exclude, exclude_count)) {
+        if( entry->d_type == DT_DIR && is_excluded(entry->d_name, exclude, exclude_count) ) {
             //printf("Skipping excluded directory: %s\n", fullpath);
             continue;
         }
 
-        if (stat(fullpath, &statbuf) == -1) {
+        if( lstat(fullpath, &statbuf) == -1 ) {
             perror("Failed to get file stats");
             continue;
         }
 
-        if (S_ISDIR(statbuf.st_mode)) {
+        unsigned short mode = statbuf.st_mode;
+        if( S_ISDIR(mode) ) {
             // Recursively scan the directory
             scan_directory(fullpath, exclude, exclude_count);
-        } else if (S_ISREG(statbuf.st_mode)) {
+        }
+        else if( S_ISREG(mode) ) {
             // Check for 'dylib' extension
             
             int ok = 0;
