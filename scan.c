@@ -171,20 +171,34 @@ void readMachO(const char *path) {
         struct mach_header_64 *mh = (struct mach_header_64 *)map;
         //printArch(mh->cputype, mh->cpusubtype);
         struct load_command *lc = (struct load_command *)(mh + 1);
-        for (uint32_t i = 0; i < mh->ncmds; i++) {
+        int ncmds = mh->ncmds;
+        //printf("File:%s - ncmds:%i\n", path, ncmds );
+        for (uint32_t i = 0; i < ncmds; i++) {
             if (lc->cmd == LC_LOAD_DYLIB) {
                 struct dylib_command *dylib = (struct dylib_command *)lc;
                 char *dylibn = (char *)dylib + dylib->dylib.name.offset;
-                if( dylibn[0] == '@' && dylibn[1] == '@' ) {
+                if( dylibn[0] == '@' ) { //&& dylibn[1] == '@' ) {
                     if( !filePrinted ) {
                         printf("File:%s\n", path );
                         filePrinted = 1;
                     }
                     printf("  LC_LOAD_DYLIB:%s\n", (char *)dylib + dylib->dylib.name.offset);
                 }
+                else {
+                    //printf("  %i LC_LOAD_DYLIB:%s\n", i, (char *)dylib + dylib->dylib.name.offset);
+                }
             }
+            /*else if( lc->cmd == LC_ID_DYLIB ) {
+                struct dylib_command *dylib = (struct dylib_command *)lc;
+                char *dylibn = (char *)dylib + dylib->dylib.name.offset;
+                printf("  %i LC_OD_DYLIB:%s\n", i, dylibn );
+            }*/
+            
             lc = (struct load_command *)((char *)lc + lc->cmdsize);
         }
+    }
+    else {
+        //printf("File2:%s\n", path );
     }
 
     munmap(map, stat_buf.st_size);
