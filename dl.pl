@@ -25,7 +25,10 @@ if( $arch eq 'arm64' ) {
 }
 
 if( $major == 12 ) { $plat .= "monterey"; }
-elsif( $major == 13 ) { $plat .= "ventura"; }
+# TODO: sonoma packages currently have an erroneous x86 package on arm
+# Sonoma and Sequoia seem to support the Ventura packages as a temporary
+# workaround (at least on ARM, but I imagine on x86)
+elsif( $major >= 13 ) { $plat .= "ventura"; }
 elsif( $major == 14 ) { $plat .= "sonoma"; }
 else {
   print "MacOS older than monterey(12) or newer than sonoma(14)\n";
