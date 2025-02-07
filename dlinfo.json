@@ -3,40 +3,39 @@
   {
     name:"xz"
     url:"https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:"
-    v:"5.4.6"
+    v:"5.6.4"
     platforms:{
-      arm64_sonoma: "01ced87d92d0c1131c069108efb14f6940f9e528e2d044ac41d9a0d8f5169f2e"
-      arm64_ventura: "baba463d36447d4c858e51dfac347792eb65216e21eedab7b98fe79793335f28"
-      arm64_monterey: "d7a51a59ce7e63b9e3f81be7f3b239d951ac83ab429a7c4423ba14c064ec7921"
-      sonoma: "139fcf6d46fb85d3693f5d7452a37ec5f50f17b5ef044ac96a2c7deccb7983b4"
-      ventura: "8a3f7325f367f90a22f3c17c0bcc65af615de713a8598e973691e84f118b325c"
-      monterey: "9195af5a2fcbecf42267f4738254a3a58257d2a303fa6c63ec09eb4def7f7c1e"
+      arm64_sequoia: "b49f3559f9425b0a8c8de8806b2162d757196c06d4043e65c6654e88cdac15e0"
+      arm64_sonoma: "928cd470a16d10f9c8d444336314101e7b524f9aa5aeaa108569982c2bd83a63"
+      arm64_ventura: "47bd10fdb1173d54ce37deea250eef4a1a05f45420422d824bf43efea13c28f6"
+      sonoma: "5d81f474f98ede15215878db75db8359b154ae17a4710c1d0dd1534c5fda451c"
+      ventura: "6e91c631057824a93598109c8fed9eae289ea8118db9c4204d5c334647982892"
     }
   }
   {
     name:"libimobiledevice-glue"
     url:"https://ghcr.io/v2/homebrew/core/libimobiledevice-glue/blobs/sha256:"
-    v:"1.2.0"
+    v:"1.3.1"
     platforms:{
-      arm64_sonoma: "5e00139aad86809adde7ad17bceeedda2a3177372df04fbe9a91bc3fa1366a5b"
-      arm64_ventura: "005fde87e6014290eb3c9e08712b6dc93dc3febf2d56c44094f37f34fe149d10"
-      arm64_monterey: "f433d2bd7a0f0af23fe462fcd8df88e87fc0c8f908d92c7f67a4a2f7a320a441"
-      sonoma: "a248f4d3c9fdf4608e941d818317e5d86c2132c1140daa45bbf6a82f8f90a53c"
-      ventura: "4580c48aec859791cb1771caf7ff609f09af8a4d9352883d1b104d6039cb193b"
-      monterey: "607706dd2f6675ee2ff5900fe82ae1b666e10bb17892eb9c2b5ba9d3391219b4"
+      arm64_sequoia: "b64aec0201f725ffa387c7624dc8690ffafd802e01117dcdda3f335b349b99ce"
+      arm64_sonoma: "131bac1d6f7a2f4044b445e956ad7f5fa82d0e3a6b9a6a0230393d7f1c45c910"
+      arm64_ventura: "a3d210d9d3d98e8919561754030ff00a6735275aefa65be7d0ece3b29a62164a"
+      sonoma: "393c65ff96685188dc9b646e1342379988af3494297052fb23c8f5e49aa5d8d7"
+      ventura: "a2022bc720c9aa8caf0c61d4bd9429be8ecc009ac1eaf4dcb5c0ece40be2e7b2"
     }
   }
   {
     name:"libplist"
     url:"https://ghcr.io/v2/homebrew/core/libplist/blobs/sha256:"
-    v:"2.5.0"
+    v:"2.6.0"
     platforms:{
-      arm64_sonoma: "59354164cd075ee3597dfc2670b2283a439b0154730dd0f4d9ccc694cbcb54f1"
-      arm64_ventura: "42fa24333cc5431048e01a225ded9addb37447575032d579c845eadd1b1cd4db"
-      arm64_monterey: "a8bec99b0a62f01f1078fc21207ebe68d5cb1f12925782ce0139134935ab39e4"
-      sonoma: "10e9d29e5c3c3354a3af67dab61b1e1d98d2020e3b5e0e2780ee4b2587bc0817"
-      ventura: "4680532f5124cd9bba37b8192ee8ecd005b05df1a15290feb18fc38ea37570bc"
-      monterey: "666028bbd050fd8c2454c952ed04ab78043de7cd15abd0c55388c8a995098af8"
+      arm64_sequoia: "3a853be8a0514790551569325c444331c67a8a6de82e6b1fd063fe821bd1ada9"
+      arm64_sonoma: "6b9ece7854f6db7fcaf6beaf043d83cd1f3dbe54c1208d5ebbd4be56ecc45e05"
+      arm64_ventura: "65565f4500012d7d9e9930f27f5dd267a841fc10cf762c51a349ece86c9f3e4f"
+      arm64_monterey: "ad1f58b4285197664514657ff118180773884f6de14f2c77031440f01297d2e1"
+      sonoma: "1c3804cd5d0ffbc2c9e694609e889e0b26d7a87ce98ba5a884bb8c6406ecb59c"
+      ventura: "c564322af66d7fc3edc4c7253f98785d203442ae5ca7402385d17f46caecffcf"
+      monterey: "e836a4889c978fc1e799e6727c0e8776e93a5982637c99e72465f3f99983f27c"
     }
   }
   {
@@ -44,6 +43,7 @@
     url:"https://ghcr.io/v2/homebrew/core/libusbmuxd/blobs/sha256:"
     v:"2.1.0"
     platforms:{
+      arm64_sequoia: "5d4892dedecd97caba1f56522add5e601b4bc09ccea572c7c9b3ff84bd14744a"
       arm64_sonoma: "8149dcd7d29cdf463c40a10e8030dcb23a4eb9e69078a88fb2e8671d9a27bdad"
       arm64_ventura: "3908c3a4d699d2aff22b40e6353c498042153a47798357c4500b76b495f24e88"
       arm64_monterey: "738b1efb11135136a9066ee73379829f29c57df598e989631d26e4ae5401f456"
@@ -57,6 +57,7 @@
     url:"https://ghcr.io/v2/homebrew/core/libtasn1/blobs/sha256:"
     v:"4.19.0"
     platforms:{
+      arm64_sequoia: "2b31aeda5359ac89f4c670508792233d7970188c64656fad7948bb987edfafa9"
       arm64_sonoma: "975eaba8f266020c3c82a667a0e693a1c6b1f76e317a95bb79b6906fd248bcc5"
       arm64_ventura: "9fcf93a7992888a29caf2bc3ad37fb27ee8ceef180367797f4a11040fa761eac"
       arm64_monterey: "cf95a18e2fabf1675d77ec8a1abb41fdb091cef689dec3318a420ad2f25beb76"
@@ -67,29 +68,51 @@
     }
   }
   {
+    name:"libtatsu"
+    url:"https://ghcr.io/v2/homebrew/core/libtatsu/blobs/sha256:"
+    v:"1.0.4"
+    platforms:{
+      arm64_sequoia: "3490caa14c81cdffce28d50ce34880ab9b95a193a26906bf035492e3c37a3b2d"
+      arm64_sonoma: "870c73a45691c13d672235e9a3ed53d0a9d76a7f1b9aafda775b541c1735c3d1"
+      arm64_ventura: "4a33d3d2692d953e3bd1c0a8561011152ab9dcb5d029f0bbc33315233337fe52"
+      sonoma: "fafd0d67b5ccd44ee5c33fd4ba38f063029a89582a21e5a88104f00638bc620f"
+      ventura: "70223395b5fb5525f701e78c40b9b5b4c9f897fec98bee2dff4af63612440da4"
+    }
+  }
+  {
     name:"sqlite"
     url:"https://ghcr.io/v2/homebrew/core/sqlite/blobs/sha256:"
-    v:"3.45.3"
+    v:"3.48.0"
     platforms:{
-      arm64_sonoma: "253a7732af34b28f992072e84d9977d511844a0ebd238e94a5cb2f3fe254604c"
-      arm64_ventura: "844fbdee84f718f211936a2aea851a6983af3501533af643afccb17314e30fd2"
-      arm64_monterey: "e51cd4fb90a3a233f8b19d0068f1f4dfd537198be60b25261069b86a463090d5"
-      sonoma: "47e8a06001c02bd20d69431a76023baa4662a60127faf9fb8a3106d5f532dd29"
-      ventura: "0b7a573709f3fad083805cd2cf0d7649721386a177cc18a08613c10a2d4c9753"
-      monterey: "71900ed318d6491eac58d5828b46e939f8dbcb5e1b1cb70c6bbc8c21bbe93192"
+      arm64_sequoia: "56459499fcb30c412b34069af462affba6150a684684b747a7696fb96bd6afe5"
+      arm64_sonoma: "88f8ceb923134e0f733355ddd5d8aeca284a6749b47bf42dab86de23854b8255"
+      arm64_ventura: "b7aa1674e769996a9fff7a79b81eae73dfcb7c91dd2b746bd2f0c8c9f05ddb4e"
+      sonoma: "7ca5392892461703f4aaad060a0c33849d95a523e16e7b9e86ec97b94ccd1082"
+      ventura: "3046ba527c7add5e0406dfb8cdce75a76fa6ba273a3bf0a64041adc2753ef8dc"
     }
   }
   {
     name:"openssl-3"
     url:"https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:"
-    v:"3.3.0"
+    v:"3.4.0"
     platforms:{
-      arm64_sonoma: "ec6f9daf8e32d96f4a2f4cd56d18533ee47bb8d9e7cb3d832ac64115d8a1a4ca"
-      arm64_ventura: "58665ec9e2873dba2799be5992eab3973f230acc352d09bd4a69131ac3ccd2d4"
-      arm64_monterey: "1afa5e6964d9418fb8bb2d489e5069becd55f963c1ea7a2a30ca838b17d9bf66"
-      sonoma: "f37328addd300e16046ee900f26d3ed026a6c810ea88269e114a4e0f06ed41b6"
-      ventura: "28be258776e175a8c29a19be5312b885574a98324d7b03c7ec12f2d7eadcbce1"
-      monterey: "f5b70155f3fdbf574843741924758ca05fc996263e348660ac817e75052dacf9"
+      arm64_sequoia: "bf2e6c5cb39433b00fa2aaf4a6db681814149f62c01f04d381c3c64cd32c1bd3"
+      arm64_sonoma: "706b2f224c9519816d987e28ecfae9cfb41d99b728e237ef98fa1c0698d1f626"
+      arm64_ventura: "4b27265cc378fad113f0ab2f8609098c3ac84f79a76ad68a03d6af96f4eb2380"
+      sonoma: "28e2abc928e8afd0c58303de69dab5e4ec8663c5591fe3c425ad9177bf377ded"
+      ventura: "9017cd4ac641f4a961b27328bf519cbed91d5e3be2ae8e7f833b866412697d2f"
+    }
+  }
+  {
+    name:"python-3.13"
+    url:"https://ghcr.io/v2/homebrew/core/python/3.13/blobs/sha256:"
+    v:"3.13.2"
+    platforms:{
+      arm64_sequoia: "166ed4ffa110e57196cade5512bd7f5d27ce5c2c386c8abd416b8fcf3f0e1683"
+      arm64_sonoma: "2b7e405b9fc4cde6ccd5ecd94f4fb511fa063e41d6334c663d6e42271c37da13"
+      arm64_ventura: "ed78343ecae2c1880e2d2c29f171ccd6df6b681a77b5d6f435cc529ef3957fa2"
+      sonoma: "80bc6fa7aa500fc462edecdc6839a54071a6e6c79e155d77b7d9d32c0c9be452"
+      ventura: "6cd37a46af6b079b8b93c54c8c25c6b7254aed009f9e429b3949aa064bd21589"
     }
   }
   {
@@ -97,9 +120,11 @@
     url:"https://ghcr.io/v2/homebrew/core/mpdecimal/blobs/sha256:"
     v:"4.0.0"
     platforms:{
+      arm64_sequoia: "0f5f269bed0e6be2de3edfc4b52867e656f993e5bcff40717f26ee94dd0d2211"
       arm64_sonoma: "2965eec8a30f462b3bd6a8cc2756c1645e75f4399471594e434e36e886239e2e"
       arm64_ventura: "1fd72d5f4b35a3d4735efd7d934154ec8b3666267571f96d64244ad35b3ee814"
       arm64_monterey: "57311ecd036fae8d74c541ab5a30944a5a5cfea7abaa6b8c936b7376821edafd"
+      sequoia: "3d6f4fb042ca6910f8926a094363ccfa1ec8ced0816dc75c6c52f066490d2dc0"
       sonoma: "377dc5e30dd1292ac1666dd43a447b861ad283024f70a3e914c7e11572ae869e"
       ventura: "bb1729bd410275aab1bd276f99fb22678b6ad53de2c9c474fdda854ed0ebaebd"
       monterey: "266a3f517227bb9f3806b18313c3b8a33688f9659e5001751e15f1f38538dacc"
@@ -110,6 +135,7 @@
     url:"https://ghcr.io/v2/homebrew/core/ideviceinstaller/blobs/sha256:"
     v:"1.1.1"
     platforms:{
+      arm64_sequoia: "42ce06edd2a59ca8e25f460c6d66689c04587f4779bf4ef4f965b5c7d01b89c4"
       arm64_sonoma: "818061a6b3ede66696892086a119faa1df036d6d4a3242672fdb955db0d23e6c"
       arm64_ventura: "dfaf6de5dc0578c882412ef904195d77a6aacf7f1b9b28855ba5d8610ce17ca1"
       arm64_monterey: "64803ee9f44f71a81476e4f609a96be3c33276da4eaa07f5f4c402e758fbd18c"
@@ -123,59 +149,34 @@
     url:"https://ghcr.io/v2/homebrew/core/libimobiledevice/blobs/sha256:"
     v:"1.3.0"
     platforms:{
-      arm64_sonoma: "f496e32077cc020a7ffcb6a6afee3034fc4c55ced685ba0b2155c0355bbf7a95"
-      arm64_ventura: "c0f9da975e59842256875121304fdb0825909f3c43b8cf1271b505cd7436955e"
-      arm64_monterey: "b465efbb59cafd4d9ea16cefd5b0d33c1411da49855e14b5864ce139b65df8c6"
-      sonoma: "dfcb200312b7e57c99699a47ffc0ed522f3fe4d1913037003b706fe545daa082"
-      ventura: "a91555bb6c89202bbb68d84bfe425aeb63c50d4001c310d39643637d93bde290"
-      monterey: "aa17026544ec683e544113478c07c1d387e3566d949c32834b083ad72042be16"
-    }
-  }
-  {
-    name:"python-3.12"
-    url:"https://ghcr.io/v2/homebrew/core/python/3.12/blobs/sha256:"
-    v:"3.12.3"
-    platforms:{
-      arm64_sonoma: "fd301f96783de7d57e8d704ca0967e5cf111350acbf1ad8bec36fa27bb75fc3c"
-      arm64_ventura: "94baa02aa52145f2a41a11ef2f12787510ab31c449457e334abd9f09b126c01f"
-      arm64_monterey: "a04e80f97f70f22b4ca6dc15160585bf4f7863c689497e38a44b984e9c5f533e"
-      sonoma: "2bd309f8e329a645ac48a64e7b7983accf6773711491f635c9c5ed5c5f3a78fb"
-      ventura: "9f5d156dee8517f0dd0bd7542974787cd38156bab4f897c4700d5787106e02a5"
-      monterey: "75ae75d6dafd805e42ba57d823d4dd8ffdbfde545ccc0340a2229ec183619274"
+      arm64_sequoia: "9bc550fcfb5ee4613073831691cda4cc54a88180e833a0f754886f1a34af4134"
+      arm64_sonoma: "2fc25461e9305a7cadd0ec50326048641a67a6231d73a4ccf69e0d90c4783a19"
+      arm64_ventura: "7017a85a4322e960abb9cc122ed45cf159eddc90c45a30d4a24aef14173ea0c6"
+      sonoma: "7ca1985300a97b783b50752ff9110cb9b02dc7d278a62451b36fa5b98d359708"
+      ventura: "c811173f433f58df573afeb557308c55be71309442e6088f0b2b93cafffb39cb"
     }
   }
   {
     name:"readline"
     url:"https://ghcr.io/v2/homebrew/core/readline/blobs/sha256:"
-    v:"8.2.10"
+    v:"8.2.13"
     platforms:{
-      arm64_sonoma: "713fd1fa8544426b7e97eb21d13153195fea4c407db8a174bd183777b81c9192"
-      arm64_ventura: "90351660d5ceca72a4c0a287555f2045db95f78aa5f65011b94213429f729cde"
-      arm64_monterey: "e58bc8376c36602c3cedf94075bb1097b04b77438c5a946fdbd37bf0eb6579c2"
-      sonoma: "9796e0ff1cc29ae7e75d8fc1a3e2c5e8ae2aeade8d9d59a16363306bf6c5b8f4"
-      ventura: "952e2975dffc98bd35673c86474dbb91fadc8d993c0720e4f085597f7a484af9"
-      monterey: "3633320dce51662036ea90acfc9adf5bb5e6f1dca7dbdb539839736129c474b0"
+      arm64_sequoia: "738c27ceee9a8b198f98438477ef7a513a96a965e3a434ac3aa8fb4ed76494b1"
+      arm64_sonoma: "e46d4ff0c800dd35b9d5cef74e61ade54edc0834231f35c695af206bed9e3608"
+      arm64_ventura: "57580f6ff00c7717c8d791a583f7837944a230c573f1fb8338fd155656be4f04"
+      arm64_monterey: "c3245660eb2d39b76441960dd6c80212debcec51de1ef4d6f86bb13d9a5f1fe3"
+      sequoia: "becf6fdd835be191881959acd788745c1075eeb70cb1fd9ee646a3080597ea6f"
+      sonoma: "0cf2cae0b9bb71bee1f9f9b3ab1e5dfc27b32f474db7f2d38b8b2dffd02da5ff"
+      ventura: "62d86d4a0c7be5d568eaf5abbb6477e4c95dc1821ef232bcb45b658dbf8f9bc4"
+      monterey: "5e5ae8819679057596a21cfde4f575d33c87db70151386d01579bc2863b948fd"
     }
   }
   {
     name:"ca-certificates"
     url:"https://ghcr.io/v2/homebrew/core/ca-certificates/blobs/sha256:"
-    v:"2024-03-11"
+    v:"2024-12-31"
     platforms:{
-      all: "cab828953672906e00a8f25db751977b8dc4115f021f8dfe82b644ade03dacdb"
-    }
-  }
-  {
-    name:"krb5"
-    url:"https://ghcr.io/v2/homebrew/core/krb5/blobs/sha256:"
-    v:"1.21.2"
-    platforms:{
-      arm64_sonoma: "2d4dc47f318eb4b612c6082831602dabf86737abaf16205efca110f79d2c4582"
-      arm64_ventura: "7d9d7b0073393cd9629f017b4dfe5866363884703fff78cbbff8a6cb39390f77"
-      arm64_monterey: "23e6b429459601ee94ff71df2130d01e31498a2c2b6ffbc37223cb84fb71a06b"
-      sonoma: "20a39d385f0cdc34029de2e0c030fc0787940a7be69cdcaa9de6899170cbb731"
-      ventura: "3d61bf09ad35a994a36390723f15d2be2be9969a980884a45941300a8c9b33cf"
-      monterey: "aba14932d5689bc4f527838ff4750fcdce0c1f634d579e7e3b9fee4bd67d8c84"
+      all: "414ada64e60703cd4e9aa97f36e29c1a7ec73d60862b5219b8110731fcfd2cb7"
     }
   }
   {
@@ -183,9 +184,11 @@
     url:"https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:"
     v:"1.5.6"
     platforms:{
+      arm64_sequoia: "487f35700f563b07036cfd429e4e7a4e37f13e22578e688cbfee2fa9484aaf9d"
       arm64_sonoma: "2028141683f55bffcd0693b9e49eef1e3dabc1e184214cacb173ca9bd54dabc0"
       arm64_ventura: "035cbadb205abbe00107f0c7746f3715e3841c007e4b3a309398e65d50c43cf5"
       arm64_monterey: "7f12fa16033d6576099c481f93a7423a526a7b3252a0ea0921ea0016c18f49f8"
+      sequoia: "eb32988fe6b57b6a5f46ed6de10f0e7c74177c8971f4ae1f9c6e7cd4af539a77"
       sonoma: "09953f22fd56bc85e0d7ceac8de7e35ed622f3affe78dd782154e5e21623037b"
       ventura: "78fd5d1b6afaef60879445e3de8227257e79ec6fca6af1e1324896bc93cf2a75"
       monterey: "b5099f7c339af2fff89af3a844a004b35aba400787ef71e1db6e856889f56557"
@@ -194,28 +197,28 @@
   {
     name:"lz4"
     url:"https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:"
-    v:"1.9.4"
+    v:"1.10.0"
     platforms:{
-      arm64_sonoma: "5a8b7116d978e403c525e61794c60b43480d0afc83e499a763f7f14641bbc9b1"
-      arm64_ventura: "cd29e40287b0a2d665a647acbea5512e8db4c371687147aab5c60bf9059b2cca"
-      arm64_monterey: "284fa580570efdc8056e4fc95dc05f7b0546aa0c346795dd616d4cec8eb99426"
-      sonoma: "2bad368b2869db32b1b22cea76a6e65da2f4e599ac8ee327b4825d54c4579445"
-      ventura: "6a911ee2a3ea072f414d2983d532b28c34b63a68ff388a0008e1528dc0668838"
-      monterey: "88b369cea90a0a119c24aa96a614fe7d77de58d18cb1803023dc925679eb905f"
-      catalina: "ddb59c42498843638f1f9d80bd0c7b7126910c4fc8ee7c69fa8784dd4bc95c1f"
+      arm64_sequoia: "5bd143b7b784989e549637ea4e484af85ba481e640dde69bc35f3843ae25abc6"
+      arm64_sonoma: "6590245dc4a919c46afa16366914cd4b5c0c4a8f4fb35a4f6ab89053f289ae5d"
+      arm64_ventura: "03119aa78b7a96d4b8fde7553f5601ff104d59156aca4086a2af7aaec6cba5a4"
+      arm64_monterey: "3ace9946a02899abcc0b8852863a62e70e1eec91deffa579512f0e6c493738a3"
+      sequoia: "f75cb29a4d25d37e1db38d95c5970cc45de7ec63ce43cfa881a877b424154a42"
+      sonoma: "96c1ed07b013308a9c205a56c0232e45ae7da70e28200c9adb03ec78b294bffd"
+      ventura: "c7bd3ba214fd8713268012f5bd71a95dee9623de0e373a38dc3426ea8b9293c3"
+      monterey: "f78cc448808d04a0c31b108d7da962020e062179e29c7d0a2303db7866d8e449"
     }
   }
   {
     name:"libzip"
     url:"https://ghcr.io/v2/homebrew/core/libzip/blobs/sha256:"
-    v:"1.10.1"
+    v:"1.11.3"
     platforms:{
-      arm64_sonoma: "8ecf154f8c0bab71c0008c6f73eb8cd2df78cfa424d8bdcffc66dc95b3bf7c14"
-      arm64_ventura: "cd7bda731a8b2e5d1a3cdf5be6b515718c56d55d16a5b45faa1a91daf9c0ca2b"
-      arm64_monterey: "a0d8bae54df1068c92ad894eddca0cd7465ecbaa3ef875c07c46bcea764bac71"
-      sonoma: "f782643b254f58ddf3830272c0221f5d35db84ebd4f3d4ef19894ca0c91648ad"
-      ventura: "4fca00c15a69f25064b40b12e37a6f552edd632f77e2947e076745b55aaeffd3"
-      monterey: "5fbb0e2a2cd9b17a416d518d324d9eb3eac88626851bad41d9fb144ccebd8757"
+      arm64_sequoia: "d047ed69c28d812b43092cdc11a95ebfb10c260294088b10c9e5c4013f8f7729"
+      arm64_sonoma: "0eef871bcff5568c941e603285f699b520fb0918876ab15129047b1eae8919c1"
+      arm64_ventura: "a5f5cad9a74903117c3168e95aed359880001176cec4012caf3347768e4653b4"
+      sonoma: "e3a656692093ac165b0c07c830cc053dffc85f916168b584538d02c4c0205692"
+      ventura: "6b4c562f07821355fd8c641a42da8fde595ade1c1a26ab76c218e3394e6f318f"
     }
   }
   ]
